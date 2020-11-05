@@ -1,0 +1,223 @@
+{
+  "workPackages": [
+    {
+      "id": 1,
+      "version": 0,
+      "sealed": true,
+      "aircraftNumber": "N904DE",
+      "description": "Annual service",
+      "date": "2020-09-12"
+    },
+    {
+      "id": 2,
+      "version": 1,
+      "aircraftNumber": "N904DE",
+      "description": "Annual service + additional services",
+      "date": "2020-09-13",
+      "parentId": 1,
+      "estimationId": 1,
+      "sealed": false
+    },
+    {
+      "id": 4,
+      "version": 0,
+      "aircraftNumber": "H904WE",
+      "description": "Problem in the landing gear",
+      "date": "2020-09-03"
+    },
+    {
+      "id": 5,
+      "version": 0,
+      "aircraftNumber": "U304DR",
+      "description": "Oil leak from rear",
+      "date": "2020-09-03"
+    },
+    {
+      "id": 6,
+      "version": 0,
+      "sealed": true,
+      "aircraftNumber": "D309PE",
+      "description": "Annual service + paint work",
+      "date": "2020-09-03"
+    },
+    {
+      "id": 7,
+      "version": 1,
+      "aircraftNumber": "D309PE",
+      "description": "Annual service + paint work",
+      "date": "2020-09-04",
+      "parentId": 6,
+      "estimationId": 6
+    },
+    {
+      "id": 8,
+      "version": 0,
+      "aircraftNumber": "G904TY",
+      "description": "Some noise from the rear",
+      "date": "2020-09-01"
+    },
+    {
+      "id": 9,
+      "version": 0,
+      "aircraftNumber": "EX3T33",
+      "description": "Inspection and reapplication of corrosion protective coatings",
+      "date": "2020-09-03"
+    },
+    {
+      "id": 10,
+      "version": 0,
+      "aircraftNumber": "AF73XT",
+      "description": "Torque tests + internal checks + flight controls ",
+      "date": "2020-09-03"
+    },
+    {
+      "id": 11,
+      "version": 0,
+      "sealed": true,
+      "aircraftNumber": "GX4L44",
+      "description": "Walk-around visual check of aircraft",
+      "date": "2020-09-21"
+    },
+    {
+      "id": 12,
+      "version": 1,
+      "sealed": false,
+      "aircraftNumber": "GX4L44",
+      "description": "No leakage and tire wear but front brake needs replacement",
+      "date": "2020-09-21",
+      "parentId": 11,
+      "estimationId": 11
+    },
+    {
+      "id": 15,
+      "version": 0,
+      "aircraftNumber": "FH1M23",
+      "date": "2020-11-02",
+      "description": "Specific checks on engine oils, hydraulics & oxygen"
+    },
+    {
+      "aircraftNumber": "AB2I67",
+      "version": 0,
+      "date": "2020-11-02",
+      "description": "Lubrication of systems such as ignition, generators, cabin, air conditioning, hydraulics, structure, and landing gear",
+      "id": 16
+    },
+    {
+      "aircraftNumber": "M3QZ89",
+      "version": 0,
+      "date": "2020-11-02",
+      "description": "Detailed check of aircraft and engine interior",
+      "id": 17
+    },
+    {
+      "aircraftNumber": "KP78T6",
+      "version": 0,
+      "date": "2020-11-02",
+      "description": "Major structural inspections with attention to fatigue damage, corrosion, etc",
+      "id": 18
+    },
+    {
+      "aircraftNumber": "PL5E56",
+      "version": 0,
+      "date": "2020-11-02",
+      "description": "Lubrication of systems such as ignition, generators, cabin, air conditioning, hydraulics, structure, and landing gear",
+      "id": 19
+    },
+    {
+      "aircraftNumber": "BD6M24",
+      "version": 0,
+      "date": "2020-11-02",
+      "description": "Visual check of aircraft exterior and engines for damage, leakage, and brake and tire wear",
+      "id": 20
+    }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "number": "JB1",
+      "status": "In Progress",
+      "description": "Engine service",
+      "estimatedDuration": 180,
+      "actualDuration": 58,
+      "workPackage": 2
+    },
+    {
+      "id": 2,
+      "number": "JB2",
+      "status": "Created",
+      "description": "Painting service",
+      "estimatedDuration": 30,
+      "workPackage": 2
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "number": "T1",
+      "status": "In Progress",
+      "description": "Change oil",
+      "assignedTo": [
+        100,
+        101
+      ],
+      "assignedToText": "A. Schwarzenegger, B. Willis",
+      "clockedOff": 40,
+      "job": 1
+    },
+    {
+      "id": 2,
+      "number": "T2",
+      "status": "Done",
+      "description": "Change filter",
+      "assignedTo": [
+        102
+      ],
+      "assignedToText": "C. Norris",
+      "clockedOff": 18,
+      "job": 1
+    },
+    {
+      "id": 2,
+      "number": "T3",
+      "status": "Planned",
+      "description": "Paint",
+      "job": 1
+    }
+  ],
+  "employees": [
+    {
+      "id": 100,
+      "firstName": "Arnold",
+      "lastName": "Schwarzenegger",
+      "position": "Junior Mechanic"
+    },
+    {
+      "id": 101,
+      "firstName": "Bruce",
+      "lastName": "Willis",
+      "position": "Senior Mechanic"
+    },
+    {
+      "id": 102,
+      "firstName": "Chuck",
+      "lastName": "Norris",
+      "position": "Technician"
+    },
+    {
+      "id": 103,
+      "firstName": "Jason",
+      "lastName": "Statham",
+      "position": "Mechanic"
+    }
+  ],
+  "aircrafts": [
+    {
+      "id": 1,
+      "registrationNumber": "ABC123",
+      "builtYear": 1998,
+      "engine": "YPK-14-2",
+      "lastServiceDate": "2020-02-16",
+      "contactNumber": "0423167593"
+    }
+  ]
+}
